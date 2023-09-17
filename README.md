@@ -4,6 +4,26 @@ This is a python script to analyze the output of the command `traceroute`. It
 plots a graph comparing distance to server and number hops and a graph comparing
 distance to server and the time taken to travel (one-way).
 
+**NOTE: This program is highly dependant on the output of `traceroute`.** Any
+change, such as an extra space in the output, could break this program. Here is
+the output of my `traceroute` program for which this program is based on. In
+the case the program breaks due to this issue, updating the
+`parse_traceroute_output` function should fix it.
+
+```
+❯ traceroute facebook.com      
+traceroute to facebook.com (31.13.80.36), 30 hops max, 60 byte packets
+ 1  * * *
+ 2  * * *
+ 3  * * *
+ 4  ns-hlfx-br001.ns.eastlink.ca (24.215.101.221)  10.406 ms  10.387 ms  10.369 ms
+ 5  ns-hlfx-br002.ns.eastlink.ca (24.215.102.10)  11.368 ms  10.374 ms  10.353 ms
+ 6  facebook-b.ip4.torontointernetxchange.net (206.108.35.3)  87.265 ms ae42.pr01.yyz1.tfbnw.net (157.240.64.30)  206.983 ms  206.932 ms
+ 7  po101.psw03.yyz1.tfbnw.net (157.240.41.151)  206.913 ms po101.psw01.yyz1.tfbnw.net (157.240.41.147)  26.312 ms po103.psw02.yyz1.tfbnw.net (74.119.78.131)  28.696 ms
+ 8  157.240.38.185 (157.240.38.185)  28.679 ms 157.240.38.235 (157.240.38.235)  26.224 ms 173.252.67.171 (173.252.67.171)  26.197 ms
+ 9  edge-star-mini-shv-01-yyz1.facebook.com (31.13.80.36)  28.599 ms  28.575 ms  26.848 ms
+```
+
 ## How to use
 
 1. Ensure you have the `python` interpreter and `matplotlib` library installed.
