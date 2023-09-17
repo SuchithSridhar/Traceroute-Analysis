@@ -30,14 +30,14 @@ distance to server and the time taken to travel (one-way).
 ## References
 
 1. The list of Arch Linux Mirrors is used
-   ([https://wiki.archlinux.org/title/mirrors](https://wiki.archlinux.org/title/mirrors))
-   as a source of URLs since it has servers present all over the world. The list
-   included in the repository was generated around 2023-09-09.
+   https://wiki.archlinux.org/title/mirrors as a source of URLs since it has
+   servers present all over the world. The list included in the repository was
+   generated around 2023-09-09.
 
 2. [IpStack](https://ipstack.com/) is used for it's API that can determine the
    geolocation of a particular IP Address. It's free to create an account.
 
-3. [https://www.movable-type.co.uk/scripts/latlong.html] this URL was used as
+3. https://www.movable-type.co.uk/scripts/latlong.html this URL was used as
    the formula to find the distance between two coordinates on Earth. It uses
    the 'haversine' formula.
 
